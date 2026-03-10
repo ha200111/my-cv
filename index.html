@@ -5,136 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Hassanein Ali Habib</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: #f4f7f6;
             color: #333;
-            line-height: 1.6;
-            padding: 40px 20px;
+            line-height: 1.5;
+            padding: 10px;
         }
 
         .container {
             max-width: 1000px;
             margin: auto;
-            background: white;
+            background: #fff;
             display: flex;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
             border-radius: 8px;
             overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* left side */
-
+        /* LEFT SIDE */
         .left {
-            width: 35%;
+            flex: 1 1 300px;
             background: #1a252f;
             color: white;
-            padding: 40px 30px;
+            padding: 20px;
         }
 
         .profile h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 24px;
             color: #3498db;
+            margin-bottom: 6px;
         }
 
         .small-text {
             font-size: 14px;
-            opacity: 0.8;
-            margin-bottom: 30px;
+            opacity: .8;
+            margin-bottom: 20px;
         }
 
         .left h3 {
             border-bottom: 1px solid #34495e;
-            padding-bottom: 8px;
-            margin: 25px 0 15px;
+            padding-bottom: 5px;
+            margin: 15px 0 10px;
             color: #3498db;
         }
 
         .left ul {
             list-style: none;
+            padding-left: 0;
         }
 
         .left ul li {
             font-size: 14px;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 5px;
+            margin-top: 8px;
         }
 
         .skills span {
             background: #34495e;
-            padding: 4px 8px;
+            padding: 4px 6px;
             border-radius: 4px;
             font-size: 12px;
         }
 
-        /* right side */
-
+        /* RIGHT SIDE */
         .right {
-            width: 65%;
-            padding: 40px;
+            flex: 2 1 600px;
+            padding: 20px;
         }
 
         .title {
-            font-size: 22px;
+            font-size: 18px;
             border-left: 4px solid #3498db;
-            padding-left: 10px;
-            margin-bottom: 20px;
+            padding-left: 8px;
+            margin-bottom: 15px;
         }
 
         .block {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .item {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .row {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 5px;
         }
 
         .item h4 {
-            font-size: 18px;
+            font-size: 16px;
             color: #2c3e50;
         }
 
         .date {
-            font-size: 13px;
+            font-size: 12px;
             color: #3498db;
             font-weight: bold;
         }
 
         .list {
-            margin-top: 8px;
-            padding-left: 20px;
+            margin-top: 6px;
+            padding-left: 15px;
         }
 
         .list li {
-            font-size: 14px;
-            margin-bottom: 5px;
+            font-size: 13px;
+            margin-bottom: 4px;
         }
 
         .project {
             border: 1px solid #eee;
-            padding: 12px;
+            padding: 10px;
             border-radius: 6px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .project h5 {
             color: #3498db;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            font-size: 14px;
         }
 
         .project p {
@@ -142,14 +150,52 @@
             color: #555;
         }
 
-        @media(max-width:768px) {
+        /* TABLET */
+        @media (min-width: 600px) and (max-width: 900px) {
             .container {
-                flex-direction: column;
+                flex-direction: row;
+            }
+
+            .left {
+                flex: 1;
+            }
+
+            .right {
+                flex: 2;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width:599px) {
+            body {
+                padding: 5px;
             }
 
             .left,
             .right {
                 width: 100%;
+                padding: 15px;
+            }
+
+            .profile h1 {
+                font-size: 22px;
+            }
+
+            .title {
+                font-size: 16px;
+            }
+
+            .item h4 {
+                font-size: 15px;
+            }
+
+            .list li,
+            .project p {
+                font-size: 12px;
+            }
+
+            .project h5 {
+                font-size: 13px;
             }
         }
     </style>
@@ -160,7 +206,6 @@
     <div class="container">
 
         <div class="left">
-
             <div class="profile">
                 <h1>Hassanein Ali Habib</h1>
                 <p class="small-text">Web Developer & IoT Specialist</p>
@@ -193,80 +238,66 @@
                 <li>MS Word, Excel, PowerPoint</li>
                 <li>Problem Solving</li>
             </ul>
-
         </div>
 
         <div class="right">
 
             <div class="block">
                 <h2 class="title">Education</h2>
-
                 <div class="item">
                     <h4>University of Information Technology and Communications</h4>
                     <p>Bachelor's Degree in Business Information Technology - 4th Year</p>
                 </div>
-
             </div>
 
             <div class="block">
                 <h2 class="title">Projects</h2>
-
                 <div class="project">
                     <h5>Medical Platform</h5>
                     <p>Web platform connecting elderly patients with hospitals.</p>
                 </div>
-
                 <div class="project">
                     <h5>IoT Projects</h5>
                     <p>Developed smart home and sensor monitoring systems using Arduino.</p>
                 </div>
-
                 <div class="project">
                     <h5>Web Project Help</h5>
                     <p>Helped another student solve coding problems in a web project.</p>
                 </div>
-
             </div>
 
             <div class="block">
                 <h2 class="title">Experience</h2>
-
                 <div class="item">
                     <div class="row">
                         <h4>Freelance Web Developer</h4>
                         <span class="date">2022 - 2024</span>
                     </div>
-
                     <ul class="list">
                         <li>Built responsive websites using HTML, CSS, JS.</li>
                         <li>Created simple UI designs.</li>
                         <li>Worked with small teams.</li>
                     </ul>
                 </div>
-
                 <div class="item">
                     <div class="row">
                         <h4>Data Entry - Al Zaeem Delivery</h4>
                         <span class="date">2021 - 2022</span>
                     </div>
-
                     <ul class="list">
                         <li>Entered daily records into database.</li>
                         <li>Checked data accuracy.</li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="block">
                 <h2 class="title">Certificates</h2>
-
                 <ul class="list">
                     <li>Kali Linux Basics</li>
                     <li>Job Conduct Training</li>
                     <li>Communication Skills</li>
                 </ul>
-
             </div>
 
         </div>
